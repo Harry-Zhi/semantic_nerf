@@ -1,0 +1,15 @@
+torch==1.6.0
+torchvision==0.7.0
+tensorboard==2.4.1
+imageio==2.9.0
+imageio-ffmpeg==0.4.2
+matplotlib==3.3.2
+scikit-image==0.17.2
+scikit-learn==0.23.2
+tqdm==4.54.1
+tensorboard==2.4.1
+pyyaml==5.3.1
+trimesh==3.9.9
+imgviz==1.2.2
+open3d==0.12.0
+opencv-python==4.4.0.44

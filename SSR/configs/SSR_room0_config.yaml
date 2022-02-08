@@ -1,0 +1,51 @@
+
+experiment:
+  scene_file: "PATHtoREPLICA/Replica/mesh/room_0/habitat/" # room_0,room_01, etc.
+  save_dir: "PATHtoLOGS"  # where to store ckpts and rendering
+  dataset_dir: "PATHtoRENDERED_REPLICA_DATA"
+  convention: "opencv"
+  width: 320
+  height: 240
+  gpu: "0"
+  
+  enable_semantic: True
+  enable_depth: True
+  endpoint_feat: False
+
+model:
+  netdepth: 8
+  netwidth: 256
+  netdepth_fine: 8
+  netwidth_fine: 256
+  chunk: 1024*128  # number of rays processed in parallel, decrease if running out of memory
+  netchunk: 1024*128  # number of pts sent through network in parallel, decrease if running out of memory
+
+render:
+    N_rays: 32*32*1  # average number of rays sampled from each sample within a batch
+    N_samples: 64  # Number of different times to sample along each ray.
+    N_importance: 128  # Number of additional fine samples per ray
+    perturb: 1
+    use_viewdirs: true
+    i_embed: 0 # 'set 0 for default positional encoding, -1 for none'
+    multires: 10  # log2 of max freq for positional encoding (3D location)'
+    multires_views: 4  # 'log2 of max freq for positional encoding (2D direction)'
+    raw_noise_std: 1  # 'std dev of noise added to regularize sigma_a output, 1e0 recommended')
+    test_viz_factor: 1  # down scaling factor when rendering test and training images
+    no_batching: True  # True-sample random pixels from random images; False-sample from all random pixels from all images
+    depth_range: [0.1, 10.0]
+    white_bkgd: false  # set to render synthetic data on a white bkgd (always use for dvoxels)
+
+train:
+    lrate: 5e-4
+    lrate_decay: 250e3
+    N_iters: 200000
+    wgt_sem: 4e-2
+
+
+
+logging: # logging/saving options
+    step_log_print: 1  # 'frequency of console print'
+    step_log_tfb: 500
+    step_save_ckpt: 20000
+    step_val: 5000 # frequency of rendering on unseen data
+    step_vis_train: 5000
