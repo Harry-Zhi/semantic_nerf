@@ -1,6 +1,6 @@
 # Semantic-NeRF: Semantic Neural Radiance Fields
 
-### [Project Page](https://shuaifengzhi.com/Semantic-NeRF/) | [Video](https://youtu.be/FpShWO7LVbM) | [Paper](https://arxiv.org/abs/2103.15875) | [Data](https://www.dropbox.com/home/Public_Hosting/Semantic_NeRF(ICCV2021)/Replica_Dataset)
+### [Project Page](https://shuaifengzhi.com/Semantic-NeRF/) | [Video](https://youtu.be/FpShWO7LVbM) | [Paper](https://arxiv.org/abs/2103.15875) | [Data](https://www.dropbox.com/sh/9yu1elddll00sdl/AAC-rSJdLX0C6HhKXGKMOIija?dl=0)
 
 
 [In-Place Scene Labelling and Understanding with Implicit Scene Representation](https://shuaifengzhi.com/Semantic-NeRF/)  
@@ -38,7 +38,7 @@ With Anaconda, you can simply create a virtual environment and install dependenc
 ## Datasets
 We mainly use [Replica](https://github.com/facebookresearch/Replica-Dataset) and [ScanNet](http://www.scan-net.org/) datasets for experiments, where we train a new Semantic-NeRF model on each 3D scene. Other similar indoor datasets with colour images, semantic labels and poses can also be used.
 
-### We also provide [pre-rendered Replica data](https://www.dropbox.com/home/Public_Hosting/Semantic_NeRF(ICCV2021)/Replica_Dataset) that can be directly used by Semantic-NeRF.
+### We also provide [pre-rendered Replica data](https://www.dropbox.com/sh/9yu1elddll00sdl/AAC-rSJdLX0C6HhKXGKMOIija?dl=0) that can be directly used by Semantic-NeRF.
 
 
 ## Running code
