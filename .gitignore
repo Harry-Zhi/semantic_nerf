@@ -28,3 +28,5 @@ SSR/results/
 /*.egg-info
 
 *.json
+
+SSR/configs/SSR_room0_config_test.yaml

@@ -23,7 +23,7 @@ For flawless reproduction of our results, the Ubuntu OS 20.04 is recommended. Th
 ### Dependencies
 Main python dependencies are listed below:
 - Python >=3.7
-- torch>=1.6.0 (integrate *searchsorted* API, otherwise need to use the third party implementation [SearchSorted](ahttps://github.com/aliutkus/torchsearchsorted))
+- torch>=1.6.0 (integrate *searchsorted* API, otherwise need to use the third party implementation [SearchSorted](https://github.com/aliutkus/torchsearchsorted) )
 - cudatoolkit>=10.1
 
 Following packages are used for 3D mesh reconstruction:
@@ -93,7 +93,6 @@ python3 train_SSR_main.py --label_propagation --partial_perc 0
 In order to improve reproducibility, for denoising and label-propagation tasks, we can also include `--visualise_save` and `--load_saved` to save/load randomly generated labels.
 
 
-
 #### 3D Reconstruction of Replica Scenes
 We also provide codes for extracting 3D semantic mesh from a trained Seamntic-NeRF model.
 
@@ -107,8 +106,7 @@ python3 SSR/extract_colour_mesh.py --sem --mesh_dir PATH_TO_MESH --mesh_dir PATH
 
 
 ## Acknowledgements
-Thanks [nerf](https://github.com/bmild/nerf), [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch) and [nerf_pl](https://github.com/kwea123/nerf_pl) for providing nice and inspiring implementations of NeRF.
-
+Thanks [nerf](https://github.com/bmild/nerf), [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch) and [nerf_pl](https://github.com/kwea123/nerf_pl) for providing nice and inspiring implementations of NeRF. Thank [Atlas](https://github.com/magicleap/Atlas) for scripts in processing ScanNet dataset.
 
 ## Citation
 If you found this code/work to be useful in your own research, please consider citing the following:

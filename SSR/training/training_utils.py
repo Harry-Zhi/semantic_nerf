@@ -63,7 +63,8 @@ def calculate_segmentation_metrics(true_labels, predicted_labels, number_classes
     predicted_labels = predicted_labels.flatten()
     valid_pix_ids = true_labels!=ignore_label
     predicted_labels = predicted_labels[valid_pix_ids] 
-
+    true_labels = true_labels[valid_pix_ids]
+    
     conf_mat = confusion_matrix(true_labels, predicted_labels, labels=list(range(number_classes)))
     norm_conf_mat = np.transpose(
         np.transpose(conf_mat) / conf_mat.astype(np.float).sum(axis=1))
