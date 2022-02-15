@@ -54,7 +54,7 @@ def get_rays_camera(B, H, W, fx, fy,  cx, cy, depth_type, convention="opencv"):
 
     if depth_type == 'euclidean':
         norm = torch.norm(dirs, dim=3, keepdim=True)
-        dirs = dirs * (1. / norm)[:, :, :, None]
+        dirs = dirs * (1. / norm)
 
     return dirs
 
@@ -94,7 +94,7 @@ def get_rays_camera_np(B, H, W, fx, fy,  cx, cy, depth_type, convention="opencv"
 
     if depth_type == 'euclidean':
         norm = np.norm(dirs, axis=3, keepdim=True)
-        dirs = dirs * (1. / norm)[:, :, :, None]
+        dirs = dirs * (1. / norm)
 
     return dirs
 
