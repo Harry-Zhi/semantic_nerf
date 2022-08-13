@@ -6,6 +6,7 @@ import json
 import time
 import math
 import yaml
+from collections import defaultdict
 
 import torch
 import torch.nn as nn
@@ -708,6 +709,23 @@ class SSRTrainer(object):
 
         return all_ret
 
+    
+    def render_rays_chunk(self, flat_rays, chunk_size=1024*4):
+        """Render rays while moving resulting chunks to cpu to avoid OOM when rendering large images."""
+        B = flat_rays.shape[0]  # num_rays
+        results = defaultdict(list)
+        for i in range(0, B, chunk_size):
+            rendered_ray_chunks = \
+                self.render_rays(flat_rays[i:i+chunk_size])
+
+            for k, v in rendered_ray_chunks.items():
+                results[k] += [v.cpu()]
+
+        for k, v in results.items():
+            results[k] = torch.cat(v, 0)
+        return results
+
+
     def volumetric_rendering(self, ray_batch):
         """
         Volumetric Rendering
@@ -1153,7 +1171,7 @@ class SSRTrainer(object):
         for i, c2w in enumerate(tqdm(rays)):
             print(i, time.time() - t)
             t = time.time()
-            output_dict = self.render_rays(rays[i])
+            output_dict = self.render_rays_chunk(rays[i], self.chunk) # render rays by chunks to avoid OOM
             rgb_coarse = output_dict["rgb_coarse"]
             disp_coarse = output_dict["disp_coarse"]
             depth_coarse = output_dict["depth_coarse"]
