@@ -6,7 +6,8 @@ experiment:
   # All parsed scannet images per scenes are arranged into a unified folder called "renders" using scannet_reader.py, 
   # where the subfolders "pose", "color", "depth" contains the corresponding data.
   # e.g., "xxx/ScanNet/scans/scene0010_00/renders/color/00001.jpg"
-
+  
+  sample_step: 100 # this is the sampling interval of the whole ScanNet sequence to determine the overall amount of training/testing images.
   convention: "opencv"
   width: 320
   height: 240
