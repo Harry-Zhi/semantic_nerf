@@ -1,6 +1,6 @@
 # Semantic-NeRF: Semantic Neural Radiance Fields
 
-### [Project Page](https://shuaifengzhi.com/Semantic-NeRF/) | [Video](https://youtu.be/FpShWO7LVbM) | [Paper](https://arxiv.org/abs/2103.15875) | [Data](https://www.dropbox.com/sh/9yu1elddll00sdl/AAC-rSJdLX0C6HhKXGKMOIija?dl=0)
+### [Project Page](https://shuaifengzhi.com/Semantic-NeRF/) | [Video](https://youtu.be/FpShWO7LVbM) | [Paper](https://arxiv.org/abs/2103.15875) | [Data(DropBox)](https://www.dropbox.com/sh/9yu1elddll00sdl/AAC-rSJdLX0C6HhKXGKMOIija?dl=0)| [Data(BaiduYun)<font size=2>[code:nerf]</font>](https://pan.baidu.com/s/1UmABiPQKm_S5Elq_ffXzPA)
 
 
 [In-Place Scene Labelling and Understanding with Implicit Scene Representation](https://shuaifengzhi.com/Semantic-NeRF/)  
