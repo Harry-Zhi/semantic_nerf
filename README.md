@@ -16,6 +16,11 @@ Published in ICCV 2021 (Oral Presentation)
 
 We build upon neural radiance fields to create a scene-specific implicit 3D semantic representation, Semantic-NeRF.
 
+
+## Latest Updates.
+- **Release of Replica Data Generation Codes.** We have provided data generation scripts for Replica sequences at [SSR/data_generation](https://github.com/Harry-Zhi/semantic_nerf/tree/main/SSR/data_generation) folder. Thanks Xin of [vMAP](https://github.com/kxhit/vMAP) for cleaning up.
+- **Instance Label Maps Available.** We have also provided corresponding instance label maps of pre-rendered Replica sequences in [dropbox](https://www.dropbox.com/home/Public_Hosting/Semantic_NeRF(ICCV2021)/Replica_Dataset) as a zip file *Replica_Instance_Segmentation.zip*.
+
 ## Getting Started
 
 For flawless reproduction of our results, the Ubuntu OS 20.04 is recommended. The models have been tested using Python 3.7, Pytorch 1.6.0, CUDA10.1. Higher versions should also perform similarly.
