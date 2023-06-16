@@ -1,0 +1,23 @@
+# Agent settings
+default_agent: 0
+gpu_id: 0
+width: 1200 #1280
+height: 680 #960
+sensor_height: 0
+
+color_sensor: true  # RGB sensor
+semantic_sensor: true # Semantic sensor
+depth_sensor: true  # Depth sensor
+enable_semantics: true
+
+# room_0
+scene_file: "/home/xin/data/vmap/room_0/habitat/mesh_semantic.ply"
+instance2class_mapping: "/home/xin/data/vmap/room_0/habitat/info_semantic.json"
+save_path: "/home/xin/data/vmap/room_0/vmap/00/"
+pose_file: "/home/xin/data/vmap/room_0/vmap/00/traj_w_c.txt"
+## HDR texture
+## issue https://github.com/facebookresearch/Replica-Dataset/issues/41#issuecomment-566251467
+#scene_file: "/home/xin/data/vmap/room_0/mesh.ply"
+#instance2class_mapping: "/home/xin/data/vmap/room_0/habitat/info_semantic.json"
+#save_path: "/home/xin/data/vmap/room_0/vmap/00/"
+#pose_file: "/home/xin/data/vmap/room_0/vmap/00/traj_w_c.txt"
